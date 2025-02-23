@@ -1,0 +1,105 @@
+
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    a {
+        color: #fff !important;
+        text-decoration: underline;
+    }
+
+    pre {
+        background-color: #000 !important;
+        color: #fff !important;
+        border: 1px solid #666 !important;
+        border-radius: 10px;
+        padding: 0.5em;
+        font-family: monospace;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+    }
+
+    code {
+        background: none !important;
+        color: #fff !important;
+        font-family: monospace;
+        padding: 0.2em 0.4em;
+        border: 1px solid #666 !important;
+        border-radius: 5px;
+    }
+
+    pre code {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+
+    hr {
+        border-color: #444 !important;
+    }
+}
+
+body {
+    margin: 1em auto;
+    max-width: 40em;
+    padding: 0 0.62em 3.24em;
+    font: 1.2em/1.62 sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+.posts {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.posts td {
+    padding: 0.5em;
+}
+
+.posts td:first-child {
+    text-align: left;
+}
+
+.posts td:last-child {
+    text-align: right;
+}
+
+
+table:not(.posts) {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid white;
+}
+
+table:not(.posts) th,
+table:not(.posts) td {
+    border: 1px solid white;
+    padding: 0.5em;
+}
+
+
+
+@media print {
+    body {
+        max-width: 100%;
+        background: #fff;
+        color: #000;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    pre, code {
+        background: #f8f8f8;
+        color: #000;
+        border: 1px solid #ccc;
+    }
+}
+
