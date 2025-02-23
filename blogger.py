@@ -20,7 +20,7 @@ def tagextract(content):
 def tagremove(content):
     return "\n".join(l for l in content.splitlines() if not (l.startswith("---") or ":" in l))
 
-def generate():
+if __name__ == "__main__":
     header, footer = load("header"), load("footer")
     post_template, index_template = load("post"), load("index")
     posts = []
@@ -42,7 +42,4 @@ def generate():
         if item not in {"header.html", "footer.html", "post.html", "index.html"}:
             s, d = os.path.join(STATIC_DIR, item), os.path.join(OUTPUT_DIR, item)
             shutil.copytree(s, d, dirs_exist_ok=True) if os.path.isdir(s) else shutil.copy2(s, d)
-
-if __name__ == "__main__":
-    generate()
     print("generated!")
